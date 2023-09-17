@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            --sm: 12px;
+            --md: 16px;
+            --lg: 24px;
+            --primaryText: #3c3c3c;
+            --secondaryText: #b4b4b4;
+            --inputField: #f0f0f0;
+            --mainColor: #FFCA3A;
+            --lightMain: #FFD970;
+            --purplePalette: #6A4C93;
+            --greenPalette: #8AC926;
+            --bluePalette: #1982C4;
+            --redPalette: #FF595E;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Outfit', sans-serif;
+            color: var(--primaryText);
+            font-size: var(--md);
+
+        }
+        .page-content {
+            display: flex;
+            flex-direction: column;
+            
+        }
+        header {
+            background-color: var(--mainColor);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 12px;
+        }
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            place-items: center;
+            width: 350px;
+        }
+        .header-content div:nth-child(3){
+            padding: 0 24px;
+        }
+        .title {
+            font-size: var(--lg);
+        }
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 24px;            
+        }
+        .content-index {
+            padding: 60px 0;
+            display: grid;
+            place-items: center;
+        }
+        .content-index ul {
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            place-items: center;
+            gap: 28px;
+            margin: 0;
+            padding: 0;
+            list-style: none;        
+        }
+        .link {
+            color: var(--primaryText);
+            text-decoration: none;
+        }
+        .button {
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid var(--primaryText);
+            text-decoration: none;
+        }
+        .button-image {
+            width: 16px;
+            height: 16px;
+        }
+        section {
+            padding: 0 24px;
+            box-sizing: border-box;
+        }
+        .projects {
+            background-color: var(--greenPalette);
+            color: white;
+        }
+        .skills-list,
+        {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .skills-list li {
+            display: flex;
+            align-items: center;
+        }
+        .skills-list li p {
+            display: block;
+            margin-left: 12px;
+        }
+        .skills-image {
+            width: 24px;
+            height: 24px;
+        }
+        .about-me {
+            background-color: var(--redPalette);
+            color: white;
+        }
+        footer {
+            padding: 24px 0 12px 12px;
+        }
+        .footer-title {
+            margin: 0;
+        }
+        .footer-list {
+            list-style: none;
+            padding: 0;
+            margin: 0; 
+        }
+        .footer-list li a {
+            text-decoration: none;
+            color: var(--secondaryText);
+        }
+        @media (min-width: 640px) {
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .page-content {
+                display: flex;
+                align-self: center;
+                width: 600px;
+                margin: 28px;
+            }
+            section, header {
+                border-radius: 16px;
+            }
+            .button-green:hover {
+                border: 1px solid var(--greenPalette);
+                color: var(--greenPalette);
+            }
+            .button-blue:hover {
+                border: 1px solid var(--bluePalette);
+                color: var(--bluePalette);
+            }
+            .button-red:hover {
+                border: 1px solid var(--redPalette);
+                color: var(--redPalette);
+            }
+            footer {
+                background-color: var(--inputField);
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }   
+            footer div {
+                width: 640px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-content">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">Ademar De Leon</h1>
+                <img src="https://media.licdn.com/dms/image/C4E03AQGp8oTaxinzQw/profile-displayphoto-shrink_800_800/0/1649699949254?e=1700697600&v=beta&t=YNyHxudrmcMxInQYTpeOAVr1URdoxsVBUTgwEtbnWUw" alt="my picture" class="profile-image">
+                <div>
+                    <p>Soy un desarrollador web con conocimientos sobre fronted y backend. Adem&aacute;s soy un apasionado de la m&uacute;sica, ciencia y tecnolog&iacute;a.</p>
+                </div>
+                <div class="button">
+                    <a href="https://medium.com/@ademardeleonvazquez" class="link">Ve mi blog en medium</a>
+                    <img src="./assets/medium-icon.svg" alt="medium logo" class="button-image">
+                </div>
+            </div>
+        </header>
+        <section class="content-index">
+            <ul>
+                <li>
+                    <a href="#projects" class="link button button-green">Proyectos</a>
+                </li>
+                <li>
+                    <a href="#skills" class="link button button-blue">Skills</a>
+                </li>
+                <li>
+                    <a href="#about-me" class="link button button-red">Sobre m&iacute;</a>
+                </li>
+            </ul>
+        </section>
+        <a id="projects"></a>
+        <section class="projects" id="projects">
+            <h2>Mis proyectos</h2>
+        </section>
+        <a id="skills"></a>
+        <section class="skills" id="skills">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>
+                    <img src="./assets/javascript-icon.svg" alt="javascript icon" class="skills-image">
+                    <p>JavaSccript</p>
+                </li>
+                <li>
+                    <img src="./assets/html-icon.svg" alt="html icon" class="skills-image">
+                    <p>HTML</p>
+                </li>
+                <li>
+                    <img src="./assets/css-icon.svg" alt="css icon" class="skills-image">
+                    <p>CSS</p>
+                </li>
+                <li>
+                    <img src="./assets/python-icon.svg" alt="python icon" class="skills-image">
+                    <p>Python</p>
+                </li>
+            </ul>
+        </section>
+        <a id="about-me"></a>
+        <section class="about-me" id="about-me">
+            <h2>Sobre m&iacute;</h2>
+        </section>
+        </a>
+    </div>
+    <footer>
+        <div>
+            <h3 class="footer-title">Contacto</h3>
+            <ul class="footer-list">
+                <li>
+                    <a href="https://www.linkedin.com/in/ademar-de-le%C3%B3n-v%C3%A1zquez-20840b1b7/">Linkedin</a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/ademar_dv/">Instagram</a>
+                </li>
+                <li>
+                    <a href="https://medium.com/@ademardeleonvazquez">Medium</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
